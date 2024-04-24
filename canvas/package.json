@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.7.1",
     "three": "^0.163.0"
   },
   "devDependencies": {
