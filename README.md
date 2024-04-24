@@ -16,6 +16,7 @@ git clone https://github.com/EricCoetzee/Learning-three.js.git
 
 # Navigate to the repository
 cd learning-threejs
+cd canvas
 
 # Install dependencies (if any)
 npm install --save-dev vite 
