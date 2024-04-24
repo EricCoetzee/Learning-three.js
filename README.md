@@ -18,7 +18,7 @@ git clone https://github.com/EricCoetzee/Learning-three.js.git
 cd learning-threejs
 
 # Install dependencies (if any)
-npm install
+npm install --save-dev vite 
 
 # Run a local server (you can use any server you prefer)
-npm run start
+npx vite
