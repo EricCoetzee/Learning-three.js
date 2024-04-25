@@ -1,7 +1,10 @@
 let scene, camera, renderer, controls;
 const planets = [];
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
 const planetData = [
-    { name: "Sun", file: "sun.glb", distance: 0, scale: 15 },
+    { name: "Sun", file: "sun.glb", distance: 0, scale: 5 },
     { name: "Mercury", file: "mercury.glb", distance: 10, scale: 0.383 },
     { name: "Venus", file: "venus.glb", distance: 15, scale: 0.949 },
     { name: "Earth", file: "earth.glb", distance: 20, scale: 1 },
@@ -23,8 +26,8 @@ function init() {
     document.body.appendChild(renderer.domElement);
 
     controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.minDistance = 12;
-    controls.maxDistance = 2000;
+    controls.minDistance = 0;
+    controls.maxDistance = 400;
 
     const starsTexture = new THREE.TextureLoader().load('./images/stars.jpg');
     const starsMaterial = new THREE.MeshBasicMaterial({
